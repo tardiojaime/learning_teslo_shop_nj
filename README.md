@@ -33,3 +33,10 @@ export class Product {
 # en el modulo de la Produc
   imports: [TypeOrmModule.forFeature([Product])],
 ```
+## Carga de Archivos
+```bash
+# Instalar paquete para el tipado
+yarn add -D @types/multer
+```
+## .GITKEEP
+Permite capturar carpetas vacias en los commits, carpeta/.gitkeep
