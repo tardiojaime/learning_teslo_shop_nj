@@ -40,3 +40,21 @@ yarn add -D @types/multer
 ```
 ## .GITKEEP
 Permite capturar carpetas vacias en los commits, carpeta/.gitkeep
+## Incriptacion de Contraseñas
+```bash
+# instalar bcrypt 
+yarn add bcrypt
+# typados
+yarn add -D @types/bcrypt
+```
+## Autenticacion
+```bash
+yarn add @nestjs/passport passport
+# para trabajar con jwt 
+yarn add @nestjs/jwt passport-jwt
+# par el tipado
+yarn add -D @types/passport-jwt
+```
+## Guards
+Usados para permitir o prevenir acceso a una ruta.
+Ej: Aquí es donde se debe de autorizar una solicitud.

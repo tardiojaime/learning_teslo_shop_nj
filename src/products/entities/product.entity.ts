@@ -3,10 +3,12 @@ import {
   BeforeInsert,
   Column,
   Entity,
+  ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { ProductImage } from './product-image.entity';
+import { User } from 'src/auth/entities/user.entity';
 
 @Entity({ name: 'products' })
 export class Product {
@@ -63,6 +65,9 @@ export class Product {
   )
   // el eager - carga todas las relaciones solo en consultas find*
   images?: ProductImage[];
+  @ManyToOne(() => User, (user) => user.product, { eager: true })
+  user: User;
+
   // AFterInsert update -
   // antes de insertar
   @BeforeInsert()
