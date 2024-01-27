@@ -16,7 +16,10 @@ import { PaginateDTO } from 'src/common/dto/pagination.dot';
 import { GetUser } from 'src/auth/decorators/get-user.decorator';
 import { User } from 'src/auth/entities/user.entity';
 import { Auth } from 'src/auth/decorators/auth.decorator';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
+import { Product } from './entities/product.entity';
 
+@ApiTags('Productos')
 @Controller('products')
 export class ProductsController {
   // logger - registrador
@@ -24,6 +27,8 @@ export class ProductsController {
 
   @Post()
   @Auth()
+  @ApiResponse({ status: 201, description: 'Product create', type: Product })
+  @ApiResponse({ status: 403, description: 'Forbideen Token' })
   create(@Body() createProductDto: CreateProductDto, @GetUser() user: User) {
     return this.productsService.create(createProductDto, user);
   }

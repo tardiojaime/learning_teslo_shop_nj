@@ -58,3 +58,8 @@ yarn add -D @types/passport-jwt
 ## Guards
 Usados para permitir o prevenir acceso a una ruta.
 Ej: Aquí es donde se debe de autorizar una solicitud.
+
+# Documentacion open API
+```bash
+npm install --save @nestjs/swagger
+```
