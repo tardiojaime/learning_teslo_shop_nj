@@ -59,6 +59,9 @@ yarn add -D @types/passport-jwt
 Usados para permitir o prevenir acceso a una ruta.
 Ej: Aquí es donde se debe de autorizar una solicitud.
 
+## Pipes
+un Pipe es una clase que se utiliza para transformar o validar datos de entrada antes de que lleguen al controlador.
+
 # Documentacion open API
 ```bash
 npm install --save @nestjs/swagger
